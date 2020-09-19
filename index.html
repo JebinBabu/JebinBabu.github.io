@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#000"> 
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#000"> 
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+    <title>Hola !</title>
+
+    <!-- logo -->
+    <link rel="shortcut icon" type="icon/png" href="images/logo.png">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- smallscreen css -->
+    <link rel="stylesheet" href="css/small.css" media="screen and (max-width:600px)">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--font awesome -->
+    <script src="https://kit.fontawesome.com/751b86da05.js" crossorigin="anonymous"></script>
+    <!-- main css -->
+    <link rel="stylesheet" href="css/range.css">
+
+    <script>
+
+
+
+    </script>
+
+  </head>
+
+
+<body onload="load()">
+
+<!-- loading ripples -->
+  <div class="loading" id="loading">
+    <img src="ripple.svg" alt="">
+  </div>
+
+
+<!-- navbar -->
+
+<nav class="navbar verticalNav"  id="navBar">
+  <ul class="navbar-nav">
+    <li class="perc" id="perc">10%</li>
+    <li class="nav-item"><a class="nav-link active" id="homeL" onclick="activate('homeL',100)" href="#" >Me.zip</a></li>
+    <li class="nav-item"><a class="nav-link" id="iiserL" onclick="activate('iiserL',350)" href="#">Find Me Here</a></li>
+    <li class="nav-item"><a class="nav-link" id="workL" onclick="activate('workL',550)" href="#">Let's Code</a></li>
+    <li class="nav-item"><a class="nav-link" id="photosL" onclick="activate('photosL',750)" href="#">Instances in Spacetime</a></li>
+    <li class="nav-item"><a class="nav-link" id="contactL" onclick="activate('contactL',900)" href="#">Say Hi !</a></li>
+    <li class="nav-item"><a class="nav-link" id="perfectL" onclick="activate('perfectL',1000)" href="#">Celebrate</a></li>
+    <li class="pointer">
+
+    </li>
+  </ul>
+</nav>
+<p class="smallPerc" id="perc2">10%</p>
+
+<!-- Page start -->
+
+
+  <div class="wrapper">
+
+
+<!-- home -->
+
+    <div class="item home" id="home" style="display:flex;">
+      <div class="container">
+          <h1 class="tagline slide-in-right">Jebin Chittilappilly</h1>
+          <p color="red" id="demo"></p>
+      </div>
+    </div>
+
+
+<!-- iiser -->
+
+    <div class="item iiser" id="iiser" style="display:none;">
+      <div class="container">
+          <h1 class="slide-in-right">My Second Home</i></h1>
+
+      </div>
+    </div>
+
+
+<!-- coding -->
+
+    <div class="item work" id="work" style="display:none;">
+
+      <div class="container">
+          <h1 class="slide-in-right">Let's Work Together</h1>
+          <p></p>
+      </div>
+    </div>
+
+
+<!-- photos -->
+
+    <div class="item photos" id="photos" style="display:none;">
+
+          <h1 class="slide-in-right">Photography</h1>
+          <div class="container content">
+            <div class="row">
+
+              <img class="image1" src="images/image15.jpg" alt="">
+              <img class="image2" src="images/image6.jpg" alt="">
+              <img class="image3" src="images/image7.jpg" alt="">
+
+
+            </div>
+            <div class="row">
+              <img class="image4" src="images/image9.jpg" alt="">
+              <img class="image5" src="images/image11.jpg" alt="">
+              <img class="image6" src="images/image14.jpg" alt="">
+            </div>
+            <div class="row icons">
+              <p>Follow Me On <a href="#" target="_blank"><span class="insta"><i class="fab fa-instagram"></i></span></a></p>
+            </div>
+          </div>
+          <p></p>
+
+    </div>
+
+
+<!-- Contact -->
+
+    <div class="item contact" id="contact" style="display:none;">
+          <h1 class="slide-in-right">Contact Me</h1>
+          <div class="container content fade-in">
+            <div class="row">
+              <div class="col-md-12">
+                <form id="submit-form" onsubmit="submitBtn()" action="" autocomplete="off">
+                  <input type="text" class="form-control" name="name" id="exampleInputEmail1" placeholder="Your Name" required>
+                  <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Your Email" required>
+                  <textarea class="form-control" name="message" rows="5" id="exampleInputEmail1" required aria-describedby="emailHelp" placeholder="Your thoughts or message"></textarea>
+                  <button style="text-align:right;" type="submit" name="button" class="btn btn-outline-primary">Send</button>
+                </form>
+              </div>
+              <div class="col-md-12 fade-in-lag" id="successMessage" style="display:none;">
+                <p class="successMessage">Your message has been sent successfully. Will reply ASAP! <i class="fas fa-paper-plane fa-3x"></i></p>
+              </div>
+            </div>
+            <div class="row icons">
+              <a href="https://wa.me/+919562701759" target="_blank"><span class="whatsapp"><i class="fab fa-whatsapp"></i></span></a>
+              <a href="#" target="_blank"><span class="insta"><i class="fab fa-instagram"></i></span></a>
+            </div>
+          </div>
+
+    </div>
+
+<!-- celebration -->
+
+    <div class="perfect" id="perfect" style="display:none;">
+      <div class="container">
+        <h2>100%</h2>
+        <h1>Damn! You Are a Perfectionist !</h1>
+        <button type="button" id="celebrate" class="btn btn-outline-danger">Celebrate</button>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- Page end -->
+
+
+  <!-- slider -->
+
+<input type="range" class="slider" min="0" max="1000" id="slider" value="100">
+<img class="keys" src="images/keys.png" height="140px">
+
+
+
+<script src="js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.2.0/dist/confetti.browser.min.js"></script>
+
+</body>
+</html>
