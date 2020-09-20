@@ -1,0 +1,21 @@
+.verticalNav{
+  display:none;
+}
+.content{
+  position: fixed;
+  top:20vh;
+  left:9vw;
+}
+.smallPerc{
+  display: flex;
+}
+.contact .content{
+  width:80vw;
+}
+.perfect h1{
+  font-size: 30px;
+}
+
+.keys{
+  display: none;
+}
