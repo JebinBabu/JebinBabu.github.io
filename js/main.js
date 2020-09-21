@@ -71,17 +71,35 @@ function activate(a,b){
 
 
 
+// onload activities
 
-// hiding load ripples
 function load(){
+
+// for hiding load ripples
   const load = document.getElementById('loading').className;
   document.getElementById('loading').className = load + " hide";
+
+
+
+// caching remaining image files
+
+  for (var i = 2; i <= 16; i++) {
+
+    var img = "img" + i;
+    var name = "image" + i;
+    img = new Image();
+    img.src = "images/" + name + ".jpg";
+    img.style.display = "none";
+
+    var body = document.querySelector('body');
+    body.appendChild(img);
+  }
 
 }
 
 
-    // caching image files
-    for (var i = 1; i <= 16; i++) {
+    // caching first 2 pages background images
+    for (var i = 0; i <= 1; i++) {
 
       var img = "img" + i;
       var name = "image" + i;
